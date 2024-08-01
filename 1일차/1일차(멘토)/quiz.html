@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+  <style>
+    body{
+      /* 정렬 및 배치 */
+      display: flex;
+      justify-content: center;  
+      /* 배경 색상을 변경할 수 있어요! */
+      /* background-color: #c3c9c954;  */
+      background-color: white;
+      }    
+    div.contents{
+      /* 정렬 및 배치 */
+      display: flex; 
+      flex-direction: column; 
+      justify-content: center; 
+      align-content: center; 
+      width: 840px;
+    }
+
+    h1.title{
+      /* 정렬 및 배치 */
+      display: flex; 
+      flex-direction: row; 
+      justify-content: start; 
+      padding: 15px; 
+      margin-bottom: 10px;
+      /* 웹페이지 제목 칸 색상을 바꿀 수 있어요!  */
+      background-color: white; 
+      font-size: larger;
+      /* 테두리를 설정할 수 있어요 */
+      /* border-radius: 10px;
+      border: 2px solid #6ad8d3; */
+    }    
+    
+    ul{list-style: none;}
+    li{float: left; }
+    a{
+      padding-right: 30px; 
+      text-decoration: none; 
+      color: black; 
+      font-weight: 600;
+    }
+    /* nav바 */
+    div.nav{
+      display: flex; 
+      flex-direction: row; 
+      align-items: center; 
+      height: 35px; 
+      margin-bottom: 10px; 
+      background-color: #6ad8d3;
+      text-decoration-line: none;
+      /* 테두리를 설정할 수 있어요 */
+      /* border-radius: 10px;
+      border: 3px solid #6ad8d3; */
+    }
+    div.main_quiz{display: flex; flex-direction: column; align-items: center; min-height: 70vh; padding: 50px; background-color: white; border: 3px solid #6ad8d3;}
+    
+    p#intro1{display: flex; text-align: center; font-size: 30px;}
+    p#intro2{display: flex; text-align: center; margin-bottom: 50px;}
+    div#answer_option{display: flex; flex-direction: row; justify-content: space-around;}
+    input#q1_radio{display: flex; flex-direction: row;}
+    div#q1_answer{display: flex; flex-direction: column; align-items: center;}
+    
+    input.input_text{padding: 5px; width: 300px;}
+
+    div.quiz_container{display: flex; flex-direction: column; width: 550px; margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid gainsboro;}
+    div.question{}
+    div.option{margin-top: 20px; margin-bottom: 20px;}
+    div.answer_container{display: none;}
+    input#real_answer{float: right; padding: 5px; background-color: royalblue; border: none; color: white;}
+    input#real_answer:focus~ div.answer_container{display: block; padding-top: 10px; padding-bottom: 10px; padding-left: 8px; background-color: whitesmoke;}
+    p.answer_is{color: royalblue;}
+    img#profile{width: 100px; border-radius: 100px; border: 2px solid black; margin-bottom: 10px;}
+
+  </style>
+  <title>나만의 웹페이지</title>
+  <meta charset="utf-8">
+  
+</head>
+<body>
+  <div class="contents">
+
+  <h1 class="title">나만의 웹페이지</h1>
+  <div class="nav">
+    <ul>
+      <li><a href="aboutMe.html">About Me</a></li>
+      <li><a href="aboutLike.html">About Like</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <!-- <li><a href="hub_easy.html">기초예제</a></li>
+      <li><a href="hub_hard.html">심화예제</a></li> -->
+    </ul>
+  </div>
+  <div class="main_quiz">
+    
+    <p id="intro1"><strong>Quiz!</strong> </p>
+    <p id="intro2"><strong>About Me 와 About Like 페이지에 있는 내용들을 가지고 퀴즈를 맞춰보자!!</strong></p>
+
+    <div class="quiz_container">
+      <div class="question">
+        <p>1. 프로필 사진으로 맞는 것은?</p>
+      </div>
+      <div class="option">
+        <div id="answer_option">
+          <div id="q1_answer">
+              <img id="profile" src="dog.png" width="10%">
+              <div id="q1_radio">
+                <input type="radio" name="num1">갈색 강아지
+              </div>
+          </div>
+          <div id="q1_answer">
+              <img id="profile" src="dog2.png" width="10%">
+              <div id="q1_radio">
+                <input type="radio" name="num1">흰색 강아지
+              </div>
+          </div>
+          <div id="q1_answer">
+              <img id="profile" src="rabbit.png" width="10%">
+              <div id="q1_radio">
+                <input type="radio" name="num1">토끼
+              </div>
+          </div>
+        </div>
+      
+      </div>
+
+      <div class="answer">
+        <input type="button" id="real_answer" value="정답 확인" >
+        <div class="answer_container">
+          <p class="answer_is"><strong>정답은 바로!!</strong></p>
+          <p>갈색 강아지!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz_container">
+      <div class="question">
+        <p>2. 나 000의 생일은?</p>
+      </div>
+      <div class="option">
+        <input type="text" class="input_text" placeholder="??월 ??일">
+      </div>
+      <div class="answer">
+        <input type="button" id="real_answer" value="정답 확인" >
+        <div class="answer_container">
+          <p class="answer_is"><strong>정답은 바로!!</strong></p>
+          <p>11월 7일</p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="quiz_container">
+      <div class="question">
+        <p>3. 맞는 것을 모두 고르시오.</p>
+      </div>
+      <div class="option">
+        <input type="checkbox">a. 000의 취미는 영화보기이다.<br>
+        <input type="checkbox">b. 000의 취미는 방탈출이다.<br>
+        <input type="checkbox">c. 000의 취미는 노래듣기다.<br>
+      </div>
+      <div class="answer">
+        <input type="button" id="real_answer" value="정답 확인" >
+        <div class="answer_container">
+          <p class="answer_is"><strong>정답은 바로!!</strong></p>
+          <p>a, c</p> 
+        </div>
+      </div>
+    </div>
+
+    <div class="quiz_container">
+      <div class="question">
+        <p>4.000가 추천한 노래 중 하현상 노래의 제목은?</p>
+      </div>
+      <div class="option">
+        <input type="text" class="input_text" placeholder="노래 제목을 입력해주세요.">
+      </div>
+      <div class="answer">
+        <input type="button" id="real_answer" value="정답 확인" >
+        <div class="answer_container">
+          <p class="answer_is"><strong>정답은 바로!!</strong></p>
+          <p>겨울이 오면</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  </div>
+  
+</body>
