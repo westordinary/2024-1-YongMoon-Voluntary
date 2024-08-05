@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+<head>
+  <style>
+    body{
+      /* 정렬 및 배치 */
+      display: flex;
+      justify-content: center;  
+      /* 배경 색상을 변경할 수 있어요! */
+      /* background-color: #c3c9c954;  */
+      background-color: white;
+        }
+
+    div.contents{
+      /* 정렬 및 배치 */
+      display: flex; 
+      flex-direction: column; 
+      justify-content: center; 
+      align-content: center; 
+      width: 840px;
+    }
+
+    h1.title{
+      /* 정렬 및 배치 */
+      display: flex; 
+      flex-direction: row; 
+      justify-content: start; 
+      padding: 15px; 
+      margin-bottom: 10px;
+      /* 웹페이지 제목 칸 색상을 바꿀 수 있어요!  */
+      background-color: white; 
+      font-size: larger;
+      /* 테두리를 설정할 수 있어요 */
+      /* border-radius: 10px;
+      border: 2px solid #6ad8d3; */
+    }
+    
+    
+    ul{
+      list-style: none;
+    }
+    li{
+      float: left; 
+    }
+    a{
+      padding-right: 30px; 
+      text-decoration: none; 
+      color: white; 
+      font-weight: 600;
+    }
+    /* nav바 */
+    div.nav{
+      display: flex; 
+      flex-direction: row; 
+      align-items: center; 
+      height: 35px; 
+      margin-bottom: 10px; 
+      background-color: #6ad8d3;
+      text-decoration-line: none;
+      /* 테두리를 설정할 수 있어요 */
+      /* border-radius: 10px;
+      border: 3px solid #6ad8d3; */
+    }
+    div.main_aboutMe{
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      min-height: 70vh; 
+      padding: 50px; 
+      background-color: white;
+      /* 테두리를 설정할 수 있어요 */
+      /* border-radius: 10px; */
+      border: 3px solid #6ad8d3;
+    }
+
+    /* 제목 */
+    p.title{
+      display: flex; 
+      flex-direction: row; 
+      justify-content: center; 
+      padding: 15px; 
+      margin-bottom: 4px; 
+      font-size: larger;
+    }
+    /* 이미지 칸 */
+    img#profile{
+      width: 150px; 
+      border-radius: 100px; 
+      border: 2px solid #6ad8d3; 
+      margin-bottom: 10px;
+    }
+
+
+
+  </style>
+
+  <title>나만의 웹페이지</title>
+  <meta charset="utf-8">
+  
+</head>
+<body>
+  <div class="contents">
+    <h1> 문제 : 1021번. 회전하는 큐</h1>
+
+
+  <div class="nav">
+    <!-- nav바에 들어갈 목차를 만들어봅시다. (ul, li 태그 사용)
+     -->
+
+  </div>
+  
+  <div class="main_aboutMe">
+    <p> 지민이는 N개의 원소를 포함하고 있는 양방향 순환 큐를 가지고 있다. 지민이는 이 큐에서 몇 개의 원소를 뽑아내려고 한다.<br><br>
+      
+      지민이는 이 큐에서 다음과 같은 3가지 연산을 수행할 수 있다.<br><br>
+      
+      첫 번째 원소를 뽑아낸다. 이 연산을 수행하면, 원래 큐의 원소가 a1, ..., ak이었던 것이 a2, ..., ak와 같이 된다.<br><br>
+      왼쪽으로 한 칸 이동시킨다. 이 연산을 수행하면, a1, ..., ak가 a2, ..., ak, a1이 된다.<br><br>
+      오른쪽으로 한 칸 이동시킨다. 이 연산을 수행하면, a1, ..., ak가 ak, a1, ..., ak-1이 된다.<br><br>
+      큐에 처음에 포함되어 있던 수 N이 주어진다. 그리고 지민이가 뽑아내려고 하는 원소의 위치가 주어진다. (이 위치는 가장 처음 큐에서의 위치이다.) 이때, 그 원소를 주어진 순서대로 뽑아내는데 드는 2번, 3번 연산의 최솟값을 출력하는 프로그램을 작성하시오.</p>
+  </div>
+  </div>
+  
+</body>
